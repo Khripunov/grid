@@ -1,0 +1,36 @@
+*.bak
+*.buildpath
+*.cache
+*.DS_Store
+*.log
+*.phpproj
+*.project
+*.puo
+*.scc
+*.settings
+*.suo
+*.svn
+*.swp
+*.vspscc
+*.vssscc
+*.tar.gz
+.npmrc
+.htaccess
+.sass-cache
+!.gitignore
+api.config.json
+bower_components
+/data/
+gitlog.txt
+gulp-aws.json
+resolve-paths.js
+app-config.js
+node_modules
+
+# Build files
+output
+dist
+
+# IDE
+*.idea
+*.vscode

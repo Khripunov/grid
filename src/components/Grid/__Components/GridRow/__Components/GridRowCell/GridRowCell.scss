@@ -1,0 +1,13 @@
+@import '@/components/General/styles/General.scss';
+
+
+.grid-row-cell {
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  padding: 12px 20px;
+  height: 42px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @include set-font-size(14px);
+}

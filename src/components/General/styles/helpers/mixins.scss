@@ -1,0 +1,96 @@
+/* MEDIA QUERIES - s */
+
+// 1280px and less
+@mixin extra-big-tablet-down {
+  @media screen and (max-width: #{$width-tablet-extra-big}) {
+    @content;
+  }
+}
+
+// 1024px and less
+@mixin tablet-landscape-down {
+  @media screen and (max-width: #{$width-tablet-landscape}) {
+    @content;
+  }
+}
+
+// 768px and less
+@mixin tablet-portable-down {
+  @media screen and (max-width: #{$width-tablet-portable}) {
+    @content;
+  }
+}
+
+// 768px and more
+@mixin tablet-portable-up {
+  @media screen and (min-width: #{$width-tablet-portable + 1px}) {
+    @content;
+  }
+}
+
+// 480px and less
+@mixin mob-big-down {
+  @media screen and (max-width: #{$width-mob-big}) {
+    @content;
+  }
+}
+
+// 480px and more
+@mixin mob-big-up {
+  @media screen and (min-width: #{$width-mob-big + 1px}) {
+    @content;
+  }
+}
+
+// 375px and less
+@mixin mob-mid-down {
+  @media screen and (max-width: #{$width-mob-mid}) {
+    @content;
+  }
+}
+
+// 320px and less
+@mixin mob-small-down {
+  @media screen and (max-width: #{$width-mob-small}) {
+    @content;
+  }
+}
+
+// 1023px and less
+@mixin tablet-landscape-down-less {
+  @media screen and (max-width: #{$width-tablet-landscape - 1px}) {
+    @content;
+  }
+}
+
+// 767px and less
+@mixin tablet-portable-down-less {
+  @media screen and (max-width: #{$width-tablet-portable - 1px}) {
+    @content;
+  }
+}
+
+// 374px and less
+@mixin mob-mid-less {
+  @media screen and (max-width: #{$width-mob-mid - 1px}) {
+    @content
+  }
+}
+
+/* MEDIA QUERIES - e */
+
+
+@mixin pseudo {
+  content: '';
+  position: absolute;
+}
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin set-font-size($size: 16px) {
+  font-size: $size;
+  line-height: $size + 8px;
+}

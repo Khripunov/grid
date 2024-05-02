@@ -1,0 +1,18 @@
+@import '@/components/General/styles/General.scss';
+
+
+.grid-row {
+  position: relative;
+  height: 42px;
+  border-bottom: 1px solid $color-fog;
+
+  &:last-child {
+    .grid-row-cell {
+      border-bottom: 0 none;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($color-sky, .15);
+  }
+}

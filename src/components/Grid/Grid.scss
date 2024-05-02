@@ -1,0 +1,16 @@
+@import '@/components/General/styles/General.scss';
+
+
+.grid {
+  position: relative;
+
+  &__wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid $color-fog;
+  }
+
+  &__body {
+    overflow: auto;
+  }
+}
