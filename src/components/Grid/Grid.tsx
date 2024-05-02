@@ -30,28 +30,28 @@ const Grid = <T, >({columnDefs, rowData, gridStyle, onGridReady}: TGridProps<T>)
         return false;
     }, [gridColumnsDefs]);
 
-    const getRowWidth = () => {
-        if (isMultilevel) {
-            return '400px';
-        }
-
-        return gridColumnsDefs.reduce((accumulator) => accumulator + 200, 0) + 'px';
-    };
-
-    const getRowHeight = () => {
-        if (isMultilevel) {
-            const rowHeight = gridColumnsDefs.reduce((accumulator) => accumulator + 42, 0);
-
-            return rowHeight - 42 + 'px';
-        }
-    };
-
     const gridRowStyle = useMemo(() => {
+        const getRowWidth = () => {
+            if (isMultilevel) {
+                return '400px';
+            }
+
+            return gridColumnsDefs.reduce((accumulator) => accumulator + 200, 0) + 'px';
+        };
+
+        const getRowHeight = () => {
+            if (isMultilevel) {
+                const rowHeight = gridColumnsDefs.reduce((accumulator) => accumulator + 42, 0);
+
+                return rowHeight - 42 + 'px';
+            }
+        };
+
         return {
             width: getRowWidth(),
             height: getRowHeight()
         };
-    }, [getRowWidth, getRowHeight]);
+    }, [gridColumnsDefs, isMultilevel]);
 
     const getHeadRowCells = () => {
         if (isMultilevel) {
